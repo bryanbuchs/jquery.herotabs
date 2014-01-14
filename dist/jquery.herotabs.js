@@ -96,6 +96,9 @@
                 return this;
             }
 
+            // trigger a hide event on the previous tab
+            this.triggerEvent('herotabs.hide', currentTab);
+
             // Stop any running animations by removing properties. This
             // also stops transitionend firing if animation is halfway through
             this.tab
